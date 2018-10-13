@@ -2,7 +2,8 @@
     id="gridContainer" 
     [dataSource]="bookListings"
     [showBorders]="true"
-    [rowAlternationEnabled]="true">
+    [rowAlternationEnabled]="true"
+    (onEditorPreparing)="onEditorPreparing($event)">
 
     <dxo-header-filter [visible]="true"></dxo-header-filter>
 
@@ -15,8 +16,8 @@
 
     <dxi-column dataField="name" [allowFiltering]="false" [allowSearch]="true" cellTemplate="nameTemplate"></dxi-column>
     <dxi-column dataField="author" [allowFiltering]="false" [allowSearch]="true"></dxi-column>
-    <dxi-column dataField="rating"></dxi-column>
-    <dxi-column dataField="store" cellTemplate="storeTemplate"></dxi-column>
+    <dxi-column dataField="rating" [allowSearch]="false"></dxi-column>
+    <dxi-column dataField="store" cellTemplate="storeTemplate" [allowSearch]="false"></dxi-column>
     <dxi-column dataField="notes" [allowFiltering]="false" [allowSearch]="true"></dxi-column>
     
     <div *dxTemplate="let column of 'nameTemplate'">

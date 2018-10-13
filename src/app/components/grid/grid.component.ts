@@ -13,4 +13,8 @@ export class GridComponent {
   constructor (private gridService: GridService) {
     this.bookListings = gridService.getListings()
   }
+
+  onEditorPreparing (e) {
+    e.updateValueTimeout = 500
+  }
 }
