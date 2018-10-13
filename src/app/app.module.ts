@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
-import { DxDataGridModule } from 'devextreme-angular'
+import { DxDataGridModule, DxSwitchModule } from 'devextreme-angular'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { HomeComponent } from './components/home/home.component'
@@ -19,7 +19,8 @@ import { GridComponent } from './components/grid/grid.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DxDataGridModule
+    DxDataGridModule,
+    DxSwitchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

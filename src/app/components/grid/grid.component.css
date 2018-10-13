@@ -10,3 +10,7 @@
 ::ng-deep .option {
     margin-top: 10px;
 }
+
+a {
+    color: #0077aa;
+}
