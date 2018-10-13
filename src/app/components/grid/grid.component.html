@@ -14,11 +14,18 @@
 
     <dxo-sorting mode="multiple"></dxo-sorting>
 
-    <dxi-column dataField="name" [allowFiltering]="false" [allowSearch]="true" cellTemplate="nameTemplate"></dxi-column>
-    <dxi-column dataField="author" [allowFiltering]="false" [allowSearch]="true"></dxi-column>
-    <dxi-column dataField="rating" [allowSearch]="false"></dxi-column>
-    <dxi-column dataField="store" cellTemplate="storeTemplate" [allowSearch]="false"></dxi-column>
-    <dxi-column dataField="notes" [allowFiltering]="false" [allowSearch]="true"></dxi-column>
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager 
+        [showPageSizeSelector]="true"
+        [allowedPageSizes]="[5, 10, 20]"
+        [showInfo]="true">
+    </dxo-pager>
+
+    <dxi-column dataField="title" [hidingPriority]="4" [width]="270" [allowFiltering]="false" [allowSearch]="true" cellTemplate="nameTemplate"></dxi-column>
+    <dxi-column dataField="author" [hidingPriority]="3" [width]="270" [allowFiltering]="false" [allowSearch]="true"></dxi-column>
+    <dxi-column dataField="rating" [hidingPriority]="1" [width]="65" [allowSearch]="false"></dxi-column>
+    <dxi-column dataField="store" [hidingPriority]="2" [width]="70" cellTemplate="storeTemplate" [allowSearch]="false"></dxi-column>
+    <dxi-column dataField="notes" [hidingPriority]="0" [allowFiltering]="false" [allowSearch]="true"></dxi-column>
     
     <div *dxTemplate="let column of 'nameTemplate'">
         <div *ngIf="column.data.storyURL == ''; else displayURL">{{column.value}}</div>

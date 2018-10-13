@@ -15,6 +15,6 @@ export class GridComponent {
   }
 
   onEditorPreparing (e) {
-    e.updateValueTimeout = 500
+    e.updateValueTimeout = 200
   }
 }
