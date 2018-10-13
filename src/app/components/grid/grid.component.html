@@ -3,10 +3,30 @@
     [dataSource]="bookListings"
     [showBorders]="true"
     [rowAlternationEnabled]="true">
+
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+
+    <dxo-search-panel 
+        [visible]="true" 
+        [width]="240" 
+        placeholder="Search..."></dxo-search-panel>
+
     <dxo-sorting mode="multiple"></dxo-sorting>
-    <dxi-column dataField="name"></dxi-column>
-    <dxi-column dataField="author"></dxi-column>
+
+    <dxi-column dataField="name" [allowFiltering]="false" [allowSearch]="true" cellTemplate="nameTemplate"></dxi-column>
+    <dxi-column dataField="author" [allowFiltering]="false" [allowSearch]="true"></dxi-column>
     <dxi-column dataField="rating"></dxi-column>
-    <dxi-column dataField="store"></dxi-column>
-    <dxi-column dataField="notes"></dxi-column>  
+    <dxi-column dataField="store" cellTemplate="storeTemplate"></dxi-column>
+    <dxi-column dataField="notes" [allowFiltering]="false" [allowSearch]="true"></dxi-column>
+    
+    <div *dxTemplate="let column of 'nameTemplate'">
+        <div *ngIf="column.data.storyURL == ''; else displayURL">{{column.value}}</div>
+        <ng-template #displayURL>
+            <a href="{{column.data.storyURL}}" target="_blank">{{column.value}}</a>
+        </ng-template>
+    </div>
+
+    <div *dxTemplate="let column of 'storeTemplate'">
+        <a href="{{column.data.storeURL}}" target="_blank">{{column.value}}</a>
+    </div>
 </dx-data-grid>
