@@ -4,7 +4,7 @@
   "scripts": {
     "start": "ng serve",
     "build": "ng build",
-    "publish": "ng build --prod --base-href \"https://b3nnylava.github.io/book-mock/\" && npx ngh"
+    "publish": "ng build --prod --base-href \"https://b3nnylava.github.io/book-mock/\" && npx ngh --dir=dist/book-mock"
   },
   "dependencies": {
     "@angular/animations": "^6.1.0",

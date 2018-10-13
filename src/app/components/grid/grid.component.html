@@ -1,0 +1,12 @@
+<dx-data-grid
+    id="gridContainer" 
+    [dataSource]="bookListings"
+    [showBorders]="true"
+    [rowAlternationEnabled]="true">
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxi-column dataField="name"></dxi-column>
+    <dxi-column dataField="author"></dxi-column>
+    <dxi-column dataField="rating"></dxi-column>
+    <dxi-column dataField="store"></dxi-column>
+    <dxi-column dataField="notes"></dxi-column>  
+</dx-data-grid>
