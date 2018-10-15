@@ -11,6 +11,10 @@
     margin-top: 10px;
 }
 
+/deep/ .dx-toolbae {
+    padding-top: 3px;
+}
+
 a {
     color: #0077aa;
 }

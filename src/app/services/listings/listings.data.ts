@@ -1,4 +1,4 @@
-import { BookListing } from './grid.service'
+import { BookListing } from './listings.service'
 
 export const listings: BookListing[] = [{
   id: 1,
@@ -8,7 +8,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/jonathan-lopez/doctor-whoof-the-complete-series-directors-cut/hardcover/product-16671951.html',
-  notes: 'Appears to lack pre-readers or editors'
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 2,
   title: `The Story of My Life`,
@@ -17,7 +17,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/xupla-mindblower/the-story-of-my-life/paperback/product-20404756.html',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 3,
   title: `Conversations in a Canterlot Cafe`,
@@ -26,7 +26,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Amazon',
   storeURL: 'http://www.amazon.com/Conversations-In-A-Canterlot-Cafe/dp/1505411041/',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 4,
   title: `The Hope Called Night: Firstborn`,
@@ -35,7 +35,7 @@ export const listings: BookListing[] = [{
   rating: '',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/shaelyn-green/the-hope-called-night-firstborn/hardcover/product-21584438.html',
-  notes: `Apparently a crossover with Warriors and Guardians of Ga'Hoole`
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 5,
   title: `Change of Life`,
@@ -44,7 +44,7 @@ export const listings: BookListing[] = [{
   rating: 'T',
   store: 'Amazon',
   storeURL: 'http://www.amazon.com/Change-Life-Bernard-Doove/dp/149482177X/',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 1,
   title: `Dr Hoof: The Complete Series - Director's Cut`,
@@ -53,7 +53,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/jonathan-lopez/doctor-whoof-the-complete-series-directors-cut/hardcover/product-16671951.html',
-  notes: 'Appears to lack pre-readers or editors'
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 2,
   title: `The Story of My Life`,
@@ -62,7 +62,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/xupla-mindblower/the-story-of-my-life/paperback/product-20404756.html',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 3,
   title: `Conversations in a Canterlot Cafe`,
@@ -71,7 +71,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Amazon',
   storeURL: 'http://www.amazon.com/Conversations-In-A-Canterlot-Cafe/dp/1505411041/',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 4,
   title: `The Hope Called Night: Firstborn`,
@@ -80,7 +80,7 @@ export const listings: BookListing[] = [{
   rating: '',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/shaelyn-green/the-hope-called-night-firstborn/hardcover/product-21584438.html',
-  notes: `Apparently a crossover with Warriors and Guardians of Ga'Hoole`
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 5,
   title: `Change of Life`,
@@ -89,7 +89,7 @@ export const listings: BookListing[] = [{
   rating: 'T',
   store: 'Amazon',
   storeURL: 'http://www.amazon.com/Change-Life-Bernard-Doove/dp/149482177X/',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 1,
   title: `Dr Hoof: The Complete Series - Director's Cut`,
@@ -98,7 +98,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/jonathan-lopez/doctor-whoof-the-complete-series-directors-cut/hardcover/product-16671951.html',
-  notes: 'Appears to lack pre-readers or editors'
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 2,
   title: `The Story of My Life`,
@@ -107,7 +107,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/xupla-mindblower/the-story-of-my-life/paperback/product-20404756.html',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 3,
   title: `Conversations in a Canterlot Cafe`,
@@ -116,7 +116,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Amazon',
   storeURL: 'http://www.amazon.com/Conversations-In-A-Canterlot-Cafe/dp/1505411041/',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 4,
   title: `The Hope Called Night: Firstborn`,
@@ -125,7 +125,7 @@ export const listings: BookListing[] = [{
   rating: '',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/shaelyn-green/the-hope-called-night-firstborn/hardcover/product-21584438.html',
-  notes: `Apparently a crossover with Warriors and Guardians of Ga'Hoole`
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 5,
   title: `Change of Life`,
@@ -134,7 +134,7 @@ export const listings: BookListing[] = [{
   rating: 'T',
   store: 'Amazon',
   storeURL: 'http://www.amazon.com/Change-Life-Bernard-Doove/dp/149482177X/',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 1,
   title: `Dr Hoof: The Complete Series - Director's Cut`,
@@ -143,7 +143,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/jonathan-lopez/doctor-whoof-the-complete-series-directors-cut/hardcover/product-16671951.html',
-  notes: 'Appears to lack pre-readers or editors'
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 2,
   title: `The Story of My Life`,
@@ -152,7 +152,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/xupla-mindblower/the-story-of-my-life/paperback/product-20404756.html',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 3,
   title: `Conversations in a Canterlot Cafe`,
@@ -161,7 +161,7 @@ export const listings: BookListing[] = [{
   rating: 'E',
   store: 'Amazon',
   storeURL: 'http://www.amazon.com/Conversations-In-A-Canterlot-Cafe/dp/1505411041/',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 4,
   title: `The Hope Called Night: Firstborn`,
@@ -170,7 +170,7 @@ export const listings: BookListing[] = [{
   rating: '',
   store: 'Lulu',
   storeURL: 'http://www.lulu.com/shop/shaelyn-green/the-hope-called-night-firstborn/hardcover/product-21584438.html',
-  notes: `Apparently a crossover with Warriors and Guardians of Ga'Hoole`
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 },{
   id: 5,
   title: `Change of Life`,
@@ -179,5 +179,5 @@ export const listings: BookListing[] = [{
   rating: 'T',
   store: 'Amazon',
   storeURL: 'http://www.amazon.com/Change-Life-Bernard-Doove/dp/149482177X/',
-  notes: ''
+  notes: 'This is a fake description added to take up space. This is a fake description added to take up space. '
 }]

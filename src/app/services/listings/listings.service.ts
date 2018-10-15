@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { listings } from './grid.data'
+import { listings } from './listings.data'
 
 export class BookListing {
   id: number
@@ -13,7 +13,7 @@ export class BookListing {
 }
 
 @Injectable()
-export class GridService {
+export class ListingsService {
   getListings (): BookListing[] {
     return listings
   }

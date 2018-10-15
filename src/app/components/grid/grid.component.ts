@@ -1,17 +1,17 @@
 import { Component } from '@angular/core'
-import { GridService, BookListing } from './grid.service'
+import { ListingsService, BookListing } from '../../services/listings/listings.service'
 
 @Component({
   selector: 'grid',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.css'],
-  providers: [GridService]
+  providers: [ListingsService]
 })
 export class GridComponent {
   bookListings: BookListing[]
 
-  constructor (private gridService: GridService) {
-    this.bookListings = gridService.getListings()
+  constructor (private listingsService: ListingsService) {
+    this.bookListings = listingsService.getListings()
   }
 
   onEditorPreparing (e) {
