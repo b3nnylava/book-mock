@@ -1,57 +1,72 @@
 <div class='container-fluid'>
-  <div id='cardRow' class='row dark-theme' *ngFor="let edition of editions">
-    <div class='col-lg-10'>
-      <h1>{{getBook(edition.bookId).title}}</h1>
-    </div>
-    <div class='col-lg-2'>
-      <h1>{{edition.status}}</h1>
-    </div>
+  <div id='cardRow' class='row dark-theme' *ngFor="let edition of editions; index as i">
     <div class='col-12'>
-      <div class='row h-100 pb-2'>
-        <div class='col-md-2 pb-lg-0 pb-2 text-center' id='picture-col'>
-          <img src="{{edition.imageLink}}">
+      <div class='row'>
+        <div class='col-lg-10'>
+          <h1>{{getBook(edition.bookId).title}}</h1>
         </div>
-        <div class='col-md-10'>
+        <!-- <div class='col-lg-2'>
+              <h1>{{edition.status}}</h1>
+            </div> -->
+            <a data-toggle="collapse" href="#card-{{i}}">
+              <svg width='40' height="30" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0 L20 30 L40 0"></path>
+              </svg>
+            </a>
+      </div>
+      <div class='row'>
+        <div id='card-{{i}}' class='col-12 collapse show'>
           <div class='row'>
-            <div class='col-sm-8'>
-              story tags
-            </div>
-            <div class='col-sm-4'>
-              meta tags
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-sm-6'>
-              story link
-            </div>
-            <div class='col-sm-6'>
-              store link
+            <div class='col-12'>
+              <div class='row h-100 pb-2'>
+                <div class='col-md-2 pb-lg-0 pb-2 text-center' id='picture-col'>
+                  <img src="{{edition.imageLink}}">
+                </div>
+                <div class='col-md-10'>
+                  <div class='row'>
+                    <div class='col-sm-8'>
+                      story tags
+                    </div>
+                    <div class='col-sm-4'>
+                      meta tags
+                    </div>
+                  </div>
+                  <div class='row'>
+                    <div class='col-sm-6'>
+                      story link
+                    </div>
+                    <div class='col-sm-6'>
+                      store link
+                    </div>
+                  </div>
+                  <div class='row'>
+                    <div class='col-sm-12'>
+                      description
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class='col-lg-8 col-md-10'>
+                          <p>notes</p>
+                        </div>
+                        <div class='col-lg-2 col-md-12 d-flex pt-lg-0 pt-1 align-items-center text-center' id='store-col'>
+                          <div class='text-center w-100'>
+                            <a href='{{listing.storeURL}}' target='_blank'>{{listing.store}}</a>
+                            store
+                          </div>
+                        </div> -->
+              </div>
             </div>
           </div>
           <div class='row'>
             <div class='col-sm-12'>
-              description
+              entry notes
             </div>
           </div>
-        </div>
-        <!-- <div class='col-lg-8 col-md-10'>
-          <p>notes</p>
-        </div>
-        <div class='col-lg-2 col-md-12 d-flex pt-lg-0 pt-1 align-items-center text-center' id='store-col'>
-          <div class='text-center w-100'>
-            <a href='{{listing.storeURL}}' target='_blank'>{{listing.store}}</a>
-            store
+          <div class='row'>
+            <div class='col-sm-12'>
+              related tree
+            </div>
           </div>
-        </div> -->
-      </div>
-      <div class='row'>
-        <div class='col-sm-12'>
-          entry notes
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-sm-12'>
-          entry notes
         </div>
       </div>
     </div>
