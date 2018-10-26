@@ -1,0 +1,17 @@
+#theme-toggle {
+  width: 71px;
+  height: 16px;
+  font-size: 9px;
+  font-weight: 600;
+  border: none;
+}
+
+#theme-toggle.dark-theme {
+  color: white;
+  background-color: #17171f;
+}
+
+#theme-toggle.light-theme {
+  color: black;
+  background-color: white;
+}

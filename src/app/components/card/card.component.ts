@@ -1,26 +1,20 @@
 import { Component } from '@angular/core'
-import { ListingsService, BookListing } from '../../services/listings/listings.service'
+import { DataService, Edition, Book } from '../../services/data/data.service'
 
 @Component({
   selector: 'card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
-  providers: [ListingsService]
+  providers: [DataService]
 })
 export class CardComponent {
-  listings: BookListing[]
+  editions: Edition[]
 
-  constructor (private listingsService: ListingsService) {
-    this.listings = listingsService.getListings()
+  constructor (private dataService: DataService) {
+    this.editions = dataService.getEditions()
   }
 
-  getProductId (url: string, store: string) {
-    let match
-    switch (store) {
-      case 'Lulu': match = url.match(/\d{8}/)[0]
-        break
-      case 'Amazon': match = url.match(/dp\/(\w{10})\//)[1]
-    }
-    return match
+  getBook (id: number): Book {
+    return this.dataService.getBook(id)
   }
 }

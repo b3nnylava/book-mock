@@ -1,18 +1,11 @@
 <div class='container-fluid'>
-        <div class='row'>
-            <div class='col-sm-12'>
-                <br>
-                <dx-switch [value]="true" [onText]='"DARK"' [offText]='"LIGHT"' [width]='"75px"' (onOptionChanged)="onOptionChanged($event)"></dx-switch>
-                &nbsp;
-                <dx-switch [(value)]="isCard" [onText]='"CARDS"' [offText]='"GRID"' [width]='"75px"'></dx-switch>
-                <br>
-                <br>
-                <div *ngIf="isCard;else isGrid">
-                    <card></card>
-                </div>
-                <ng-template #isGrid>
-                    <grid></grid>
-                </ng-template>
-            </div>
+    <div class='row'>
+        <div class='col-sm-12'>
+            <br>
+            <button id='theme-toggle' class='dark-theme' (click)='toggleTheme()'>DARK</button>
+            <br>
+            <br>
+            <card></card>
         </div>
     </div>
+</div>

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core'
-import DxThemes from 'devextreme/ui/themes'
 
 @Component({
   selector: 'app-root',
@@ -7,21 +6,22 @@ import DxThemes from 'devextreme/ui/themes'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isCard
+  isDark = true
 
-  ngOnInit () {
-    DxThemes.current('generic.dark')
-  }
-
-  onOptionChanged (e) {
-    if (e.value) {
-      DxThemes.current('generic.dark')
-      $('body').css('background-color','#424548')
-      $('#menu').removeClass('navbar-light bg-light').addClass('navbar-dark bg-dark')
+  toggleTheme () {
+    if (this.isDark) {
+      $('.dark-theme').each(function () {
+        $(this).addClass('light-theme')
+        $(this).removeClass('dark-theme')
+      })
+      $('#theme-toggle').text('LIGHT')
     } else {
-      DxThemes.current('generic.light')
-      $('body').css('background-color','lightgrey')
-      $('#menu').removeClass('navbar-dark bg-dark').addClass('navbar-light bg-light')
+      $('.light-theme').each(function () {
+        $(this).addClass('dark-theme')
+        $(this).removeClass('light-theme')
+      })
+      $('#theme-toggle').text('DARK')
     }
+    this.isDark = !this.isDark
   }
 }
