@@ -1,0 +1,13 @@
+.cardRow {
+  margin-bottom: 5px;
+}
+
+.cardRow.dark-theme {
+  background-color: #17171f;
+  color: #f5f6f7;
+}
+
+.cardRow.light-theme {
+  background-color: white;
+  color: black;
+}

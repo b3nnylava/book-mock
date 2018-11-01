@@ -30,19 +30,19 @@ export interface Edition {
 
 @Injectable()
 export class DataService {
-  getEditions (): Edition[] {
+  getAllEditions (): Edition[] {
     return editions
   }
 
-  getBook (id: number): Book {
+  getEditionById (id: number): Edition {
+    return editions.find(x => x.id === id)
+  }
+
+  getBookById (id: number): Book {
     return books.find(x => x.id === id)
   }
 
-  getSeries (id: number): Series {
+  getSeriesById (id: number): Series {
     return series.find(x => x.id === id)
-  }
-
-  getBooksBySeriesId(seriesId: number): Book[] {
-    return books.filter(x => x.seriesId === seriesId)
   }
 }

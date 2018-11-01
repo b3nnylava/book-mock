@@ -16,8 +16,8 @@ export class SeriesComponent {
   constructor (private route: ActivatedRoute,
     private dataService: DataService) {
     this.route.params.subscribe(params => {
-      this.series = this.dataService.getSeries(+params['seriesId'])
-      this.books = this.dataService.getBooksBySeriesId(this.series.id)
+      // this.series = this.dataService.getSeries(+params['seriesId'])
+      // this.books = this.dataService.getBooksBySeriesId(this.series.id)
     })
   }
 }

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'
-import { DataService, Edition, Book } from '../../services/data/data.service'
+import { Component, Input } from '@angular/core'
+import { DataService, Edition, Book, Series } from '../../services/data/data.service'
 
 @Component({
   selector: 'card',
@@ -8,13 +8,18 @@ import { DataService, Edition, Book } from '../../services/data/data.service'
   providers: [DataService]
 })
 export class CardComponent {
-  editions: Edition[]
+  @Input() index: number
+  @Input() editionId: number
 
-  constructor (private dataService: DataService) {
-    this.editions = dataService.getEditions()
-  }
+  edition: Edition
+  book: Book
+  series: Series
 
-  getBook (id: number): Book {
-    return this.dataService.getBook(id)
+  constructor (private dataService: DataService) {}
+
+  ngOnInit () {
+    this.edition = this.dataService.getEditionById(this.editionId)
+    this.book = this.dataService.getBookById(this.edition.bookId)
+    this.series = this.dataService.getSeriesById(this.book.seriesId)
   }
 }

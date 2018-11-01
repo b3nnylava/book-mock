@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { CardComponent } from './components/card/card.component';
 import { SeriesComponent } from './components/series/series.component';
 import { BookComponent } from './components/book/book.component';
-import { EditionComponent } from './components/edition/edition.component'
+import { EditionComponent } from './components/edition/edition.component';
+import { HomeComponent } from './components/home/home.component'
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { EditionComponent } from './components/edition/edition.component'
     CardComponent,
     SeriesComponent,
     BookComponent,
-    EditionComponent
+    EditionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

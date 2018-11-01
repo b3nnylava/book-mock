@@ -1,0 +1,5 @@
+<div class='container-fluid'>
+  <div class='row dark-theme cardRow' *ngFor="let edition of editions; index as i">
+    <card class='col-12' [index]='i' [editionId]='edition.id'></card>
+  </div>
+</div>
