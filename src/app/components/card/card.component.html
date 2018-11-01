@@ -1,13 +1,12 @@
 <div class='row'>
   <div class='col-lg-10'>
-    <a href='{{book.storyLink}}' target='_blank'>
-      <h1>{{book.title}}</h1>
-    </a>
+    <h1>{{book.title}}</h1>
     <h6>{{book.author}}</h6>
   </div>
   <div class='col-lg-2 text-right'>
+    <h3 class='d-inline-block mr-3 mt-1'>{{edition.status}}</h3>
     <label data-toggle="collapse" [attr.data-target]="'#card-' + index">
-      <svg class='toggle-arrow dark-theme' width='40' height='30'>
+      <svg fill='#8894a0' width='40' height='30'>
         <path d='M0 0 L20 30 L40 0'></path>
       </svg>
     </label>
@@ -23,39 +22,37 @@
           </div>
           <div class='col-md-10'>
             <div class='row'>
-              <div class='col-sm-8'>
-                story tags
-              </div>
-              <div class='col-sm-4'>
-                meta tags
+              <div class='col-sm-12'>
+                <div class='btn btn-dark px-2 py-1 mr-1' *ngFor='let tag of book.tags'>{{tag}}</div>
+                <div class='btn btn-dark px-2 py-1 mr-1' *ngFor='let tag of edition.metaTags'>{{tag}}</div>
               </div>
             </div>
             <div class='row'>
-              <div class='col-sm-6'>
-                story link
+              <div class='col-sm-6 text-center pt-2'>
+                <a href='{{edition.storeLink}}' target='_blank' class='btn btn-dark px-2 py-1 mr-1'>Buy Here</a>
               </div>
-              <div class='col-sm-6'>
-                store link
+              <div class='col-sm-6 text-center pt-2'>
+                <a href='{{book.storyLink}}' target='_blank' class='btn btn-dark px-2 py-1 mr-1'>Read Here</a>
               </div>
             </div>
             <div class='row'>
               <div class='col-sm-12'>
-                description
+                {{book.description}}
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class='row'>
+    <div *ngIf='edition.notes' class='row'>
       <div class='col-sm-12'>
-        entry notes
+        {{edition.notes}}
       </div>
     </div>
-    <div class='row'>
+    <!-- <div class='row'>
       <div class='col-sm-12'>
         related tree
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

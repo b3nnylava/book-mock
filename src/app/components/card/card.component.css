@@ -19,8 +19,3 @@ h1 {
 .collapsed > svg {
     transform: rotate(180deg);
 }
-
-.toggle-arrow {
-    fill: #8894a0;
-    margin-top: 3px;
-}
