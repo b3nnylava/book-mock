@@ -1,18 +1,15 @@
 <div class='container-fluid'>
-  <div id='cardRow' class='row dark-theme' *ngFor="let edition of editions; index as i">
+  <div class='row dark-theme cardRow' *ngFor="let edition of editions; index as i">
     <div class='col-12'>
       <div class='row'>
         <div class='col-lg-10'>
-          <h1>{{getBook(edition.bookId).title}}</h1>
+          <h1>{{getBook(edition.bookId).title}} | {{getBook(edition.bookId).author}}</h1>
         </div>
-        <!-- <div class='col-lg-2'>
-              <h1>{{edition.status}}</h1>
-            </div> -->
-            <a data-toggle="collapse" href="#card-{{i}}">
-              <svg width='40' height="30" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0 L20 30 L40 0"></path>
-              </svg>
-            </a>
+        <label data-toggle="collapse" [attr.data-target]="'#card-'+i">
+          <svg class='toggle-arrow dark-theme' width='40' height='30' >
+            <path d='M0 0 L20 30 L40 0'></path>
+          </svg>
+        </label>
       </div>
       <div class='row'>
         <div id='card-{{i}}' class='col-12 collapse show'>

@@ -16,12 +16,24 @@ h1 {
     color: #8894a0;
 }
 
-#cardRow.dark-theme {
+.cardRow {
+    margin-bottom: 5px;
+}
+
+.cardRow.dark-theme {
     background-color: #17171f;
     color: #f5f6f7;
 }
 
-#cardRow.light-theme {
+.cardRow.light-theme {
     background-color: white;
     color: black;
+}
+.collapsed > svg {
+    transform: rotate(180deg);
+}
+
+.toggle-arrow {
+    fill: #8894a0;
+    margin-top: 3px;
 }

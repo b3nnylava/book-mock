@@ -37,4 +37,12 @@ export class DataService {
   getBook (id: number): Book {
     return books.find(x => x.id === id)
   }
+
+  getSeries (id: number): Series {
+    return series.find(x => x.id === id)
+  }
+
+  getBooksBySeriesId(seriesId: number): Book[] {
+    return books.filter(x => x.seriesId === seriesId)
+  }
 }
