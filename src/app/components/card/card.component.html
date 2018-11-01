@@ -29,10 +29,16 @@
             </div>
             <div class='row'>
               <div class='col-sm-6 text-center pt-2'>
-                <a href='{{edition.storeLink}}' target='_blank' class='btn btn-dark px-2 py-1 mr-1'>Buy Here</a>
+                <a *ngIf='edition.storeLink; else noStoreLink' href='{{edition.storeLink}}' target='_blank' class='btn btn-dark px-2 py-1 mr-1'>Buy Here</a>
+                <ng-template #noStoreLink>
+                  <a class='btn btn-secondary px-2 py-1 mr-1' disabled>No Store Link</a>
+                </ng-template>
               </div>
               <div class='col-sm-6 text-center pt-2'>
-                <a href='{{book.storyLink}}' target='_blank' class='btn btn-dark px-2 py-1 mr-1'>Read Here</a>
+                <a *ngIf='book.storyLink; else noStoryLink' href='{{book.storyLink}}' target='_blank' class='btn btn-dark px-2 py-1 mr-1'>Read Here</a>
+                <ng-template #noStoryLink>
+                  <a class='btn btn-secondary px-2 py-1 mr-1' disabled>No Story Link</a>
+                </ng-template>
               </div>
             </div>
             <div class='row'>
